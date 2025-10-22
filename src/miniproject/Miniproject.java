@@ -6,7 +6,7 @@ package miniproject;
 
 /**
  *
- * @author User
+ * @author teting
  */
 public class Miniproject {
 
