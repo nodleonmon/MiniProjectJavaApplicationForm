@@ -6,7 +6,7 @@ package miniproject;
 
 /**
  *
- * @author Razman and mawi and some people
+ * @author Razman and mawi and some peopleand others
  */
 public class Miniproject {
 
