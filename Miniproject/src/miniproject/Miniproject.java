@@ -6,7 +6,7 @@ package miniproject;
 
 /**
  *
- * @author User
+ * @author Razman
  */
 public class Miniproject {
 
@@ -16,5 +16,5 @@ public class Miniproject {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    
+
 }
