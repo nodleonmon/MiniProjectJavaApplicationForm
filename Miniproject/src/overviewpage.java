@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package javafinalproject;
+
+import javax.mail.*;
 /**
  *
  * @author USER

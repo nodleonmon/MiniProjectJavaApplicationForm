@@ -4,12 +4,13 @@
  */
 package miniproject;
 
-import javafinalproject.overviewpage;
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
 
 /**
  *
- * @author Razman and mawi and some peopleand others and nasirul and aqippower 
+ * @author User
  */
 public class Miniproject {
 
@@ -18,12 +19,11 @@ public class Miniproject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        JFrame MyFrame = new JFrame("Overview UCAS GMI");
-        MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        MyFrame.add(new overviewpage());
-        MyFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Full screen
-        MyFrame.setLocationRelativeTo(null); // Center
-        MyFrame.setVisible(true);
+        JFrame MyFrame = new JFrame("My First Window");
+            MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            MyFrame.add(new Subproject());
+            MyFrame.setSize(400,400);
+            MyFrame.setVisible(true);
     }
-
+    
 }
