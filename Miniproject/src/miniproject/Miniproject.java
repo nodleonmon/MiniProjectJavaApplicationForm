@@ -4,6 +4,9 @@
  */
 package miniproject;
 
+import javafinalproject.overviewpage;
+import javax.swing.JFrame;
+
 /**
  *
  * @author Razman and mawi and some peopleand others and nasirul and aqippower 
@@ -15,6 +18,12 @@ public class Miniproject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        JFrame MyFrame = new JFrame("Overview UCAS GMI");
+        MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        MyFrame.add(new overviewpage());
+        MyFrame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Full screen
+        MyFrame.setLocationRelativeTo(null); // Center
+        MyFrame.setVisible(true);
     }
 
 }
