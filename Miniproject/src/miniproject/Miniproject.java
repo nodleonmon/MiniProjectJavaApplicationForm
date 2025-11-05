@@ -18,12 +18,14 @@ public class Miniproject {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        JFrame MyFrame = new JFrame("My First Window");
-            MyFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            MyFrame.add(new Subproject());
-            MyFrame.setSize(400,400);
-            MyFrame.setVisible(true);
+         SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Student Application Form");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(800, 700);
+            frame.setContentPane(new Subproject());
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        });
     }
     
 }
