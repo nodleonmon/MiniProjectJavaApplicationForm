@@ -43,9 +43,6 @@ public class homepage extends javax.swing.JPanel {
         contentPanel.add(review6);
         contentPanel.add(jPanel1);
         contentPanel.add(jPanel2);
-        contentPanel.add(Profile);
-        contentPanel.add(Quiz);
-        contentPanel.add(Logout);
 
         // Set manual positions
         jLabel1.setBounds(450, 80, 750, 60);
@@ -103,10 +100,6 @@ public class homepage extends javax.swing.JPanel {
         review5 = new javax.swing.JButton();
         apply6 = new javax.swing.JButton();
         review6 = new javax.swing.JButton();
-        jToolBar1 = new javax.swing.JToolBar();
-        Profile = new javax.swing.JButton();
-        Quiz = new javax.swing.JButton();
-        Logout = new javax.swing.JButton();
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -233,41 +226,6 @@ public class homepage extends javax.swing.JPanel {
             }
         });
 
-        jToolBar1.setBorder(new javax.swing.border.MatteBorder(null));
-        jToolBar1.setRollover(true);
-
-        Profile.setText("Profile");
-        Profile.setFocusable(false);
-        Profile.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Profile.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        Profile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProfileActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(Profile);
-
-        Quiz.setText("Quiz");
-        Quiz.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Quiz.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        Quiz.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                QuizActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(Quiz);
-
-        Logout.setText("Log Out");
-        Logout.setFocusable(false);
-        Logout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Logout.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        Logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LogoutActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(Logout);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -308,13 +266,8 @@ public class homepage extends javax.swing.JPanel {
                             .addComponent(review4, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGap(186, 186, 186))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(194, 194, 194)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(194, 194, 194)
+                .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -322,8 +275,7 @@ public class homepage extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
+                        .addGap(98, 98, 98)
                         .addComponent(jLabel1)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -377,6 +329,18 @@ public class homepage extends javax.swing.JPanel {
 
     private void review1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review1ActionPerformed
         // TODO add your handling code here:
+            // Get the parent JFrame that holds this panel
+    JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+
+    // Remove the current panel (overview)
+    parentFrame.getContentPane().removeAll();
+
+    // Add the homepage panel
+    parentFrame.add(new coursepreview());
+
+    // Refresh the frame to display the new panel
+    parentFrame.revalidate();
+    parentFrame.repaint();
     }//GEN-LAST:event_review1ActionPerformed
 
     private void apply2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply2ActionPerformed
@@ -384,6 +348,19 @@ public class homepage extends javax.swing.JPanel {
     }//GEN-LAST:event_apply2ActionPerformed
 
     private void review2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review2ActionPerformed
+        // TODO add your handling code here:
+            // Get the parent JFrame that holds this panel
+    JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+
+    // Remove the current panel (overview)
+    parentFrame.getContentPane().removeAll();
+
+    // Add the homepage panel
+    parentFrame.add(new coursepreview());
+
+    // Refresh the frame to display the new panel
+    parentFrame.revalidate();
+    parentFrame.repaint();
         // TODO add your handling code here:
     }//GEN-LAST:event_review2ActionPerformed
 
@@ -393,6 +370,19 @@ public class homepage extends javax.swing.JPanel {
 
     private void review3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review3ActionPerformed
         // TODO add your handling code here:
+            // Get the parent JFrame that holds this panel
+    JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+
+    // Remove the current panel (overview)
+    parentFrame.getContentPane().removeAll();
+
+    // Add the homepage panel
+    parentFrame.add(new coursepreview());
+
+    // Refresh the frame to display the new panel
+    parentFrame.revalidate();
+    parentFrame.repaint();
+        // TODO add your handling code here:
     }//GEN-LAST:event_review3ActionPerformed
 
     private void apply4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply4ActionPerformed
@@ -400,6 +390,19 @@ public class homepage extends javax.swing.JPanel {
     }//GEN-LAST:event_apply4ActionPerformed
 
     private void review4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review4ActionPerformed
+        // TODO add your handling code here:
+            // Get the parent JFrame that holds this panel
+    JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+
+    // Remove the current panel (overview)
+    parentFrame.getContentPane().removeAll();
+
+    // Add the homepage panel
+    parentFrame.add(new coursepreview2());
+
+    // Refresh the frame to display the new panel
+    parentFrame.revalidate();
+    parentFrame.repaint();
         // TODO add your handling code here:
     }//GEN-LAST:event_review4ActionPerformed
 
@@ -409,6 +412,19 @@ public class homepage extends javax.swing.JPanel {
 
     private void review5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review5ActionPerformed
         // TODO add your handling code here:
+            // Get the parent JFrame that holds this panel
+    JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+
+    // Remove the current panel (overview)
+    parentFrame.getContentPane().removeAll();
+
+    // Add the homepage panel
+    parentFrame.add(new coursepreview2());
+
+    // Refresh the frame to display the new panel
+    parentFrame.revalidate();
+    parentFrame.repaint();
+        // TODO add your handling code here:
     }//GEN-LAST:event_review5ActionPerformed
 
     private void apply6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply6ActionPerformed
@@ -417,19 +433,20 @@ public class homepage extends javax.swing.JPanel {
 
     private void review6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review6ActionPerformed
         // TODO add your handling code here:
+            // Get the parent JFrame that holds this panel
+    JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+
+    // Remove the current panel (overview)
+    parentFrame.getContentPane().removeAll();
+
+    // Add the homepage panel
+    parentFrame.add(new coursepreview2());
+
+    // Refresh the frame to display the new panel
+    parentFrame.revalidate();
+    parentFrame.repaint();
+        // TODO add your handling code here:
     }//GEN-LAST:event_review6ActionPerformed
-
-    private void ProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfileActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProfileActionPerformed
-
-    private void QuizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuizActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QuizActionPerformed
-
-    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LogoutActionPerformed
     
     private void addAccordionUI1() {
         jPanel1.setLayout(new BoxLayout(jPanel1, BoxLayout.Y_AXIS));
@@ -522,9 +539,6 @@ public class homepage extends javax.swing.JPanel {
 }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Logout;
-    private javax.swing.JButton Profile;
-    private javax.swing.JButton Quiz;
     private javax.swing.JButton apply1;
     private javax.swing.JButton apply2;
     private javax.swing.JButton apply3;
@@ -536,7 +550,6 @@ public class homepage extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JToolBar jToolBar1;
     private javax.swing.JButton review1;
     private javax.swing.JButton review2;
     private javax.swing.JButton review3;
