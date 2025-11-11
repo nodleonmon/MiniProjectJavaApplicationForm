@@ -67,11 +67,14 @@ public class signuppage {
         // 🪄 Action Button
         signupBtn.addActionListener(e -> {
             playClickSound();
-            JOptionPane.showMessageDialog(frame, "Account Created!");
-            
-             // Lepas mesej, tutup sign up dan buka login
-            frame.dispose();
-            new Loginpage();
+            if (emailField.getText().indexOf("@") !=0){
+                Database.database_functions.database_Add("Users", emailField.getText(), new String(passField.getPassword()));
+                JOptionPane.showMessageDialog(frame, "Account Created!");
+
+                 // Lepas mesej, tutup sign up dan buka login
+                frame.dispose();
+                new Loginpage();
+            }
         });
 
         backBtn.addActionListener(e -> {
