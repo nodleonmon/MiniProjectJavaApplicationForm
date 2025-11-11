@@ -99,7 +99,7 @@ public class database_functions {
                 prestatement.setString(13, Supporting_Att);
                 
                 prestatement.executeUpdate();    
-                database_close();
+                prestatement.close();
             }
         }
         //FullName	IC	Age	Profile_Picture	Education	Education_Attachment	Course_1	Course_2	Course_3	Phone_Number	Email	Home_Address	Supporting_Attachment
@@ -119,13 +119,13 @@ public class database_functions {
                 prestatement.setString(2, Name);
                 prestatement.setString(3, Password);
                 prestatement.setBoolean(4, false);
-                prestatement.executeUpdate();      
+                prestatement.executeUpdate();    
+                prestatement.close();
             }
         }
         catch(SQLException sqlex){
             sqlex.printStackTrace();
         }
-        database_close();
     }
     public static String[] database_search(String Table, String Username, String Password ){
         try{
