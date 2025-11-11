@@ -58,6 +58,7 @@ public class Loginpage {
             
             if(email.equals("admin@gmail.com") && password.equals("12345")) { 
                 JOptionPane.showMessageDialog(frame, "Login Successful!"); 
+                miniproject.EmailMain.main(null);
             } else { 
                 JOptionPane.showMessageDialog(frame, "Invalid Credentials!");
             }

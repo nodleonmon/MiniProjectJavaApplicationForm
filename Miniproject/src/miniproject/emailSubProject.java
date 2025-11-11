@@ -23,7 +23,7 @@ import javax.sound.sampled.Clip;
  */
 
 
-public class Subproject extends javax.swing.JPanel {
+public class emailSubProject extends javax.swing.JPanel {
     private File pictureFile = null;
     private File educationFile = null;
     private File supportCertFile = null;
@@ -36,7 +36,7 @@ public class Subproject extends javax.swing.JPanel {
     /**
      * Creates new form Subproject
      */
-    public Subproject() {
+    public emailSubProject() {
         initComponents();
         ActionListener courseCheckListener = e -> checkDuplicateCourses();   
         jComboBox1.addActionListener(courseCheckListener);
