@@ -7,6 +7,8 @@ package javafinalproject;
  *
  * @author USER
  */
+import java.awt.Graphics;
+import java.awt.Image;
 import javax.swing.*;  
 
 public class homepage extends javax.swing.JPanel {
@@ -22,7 +24,18 @@ public class homepage extends javax.swing.JPanel {
     }
     
     private void makeScrollable() {
-        JPanel contentPanel = new JPanel(null);
+        
+        JPanel contentPanel = new JPanel(null){
+        private Image backgroundImage = new ImageIcon(getClass().getResource("/javafinalproject/gambaran/bgimage2v2.jpeg")).getImage();
+        @Override
+        protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (backgroundImage != null) {
+        // Scale image to fit the panel
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+    }
+    }
+    };
         contentPanel.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         // Move GUI components into content panel
