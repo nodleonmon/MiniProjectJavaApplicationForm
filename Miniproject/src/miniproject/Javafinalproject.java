@@ -1,5 +1,8 @@
-package javafinalproject;
+package miniproject;
 
+import javafinalproject.homepage;
+import javafinalproject.overviewpage;
+import javafinalproject.quizpage;
 import javax.swing.*;
 
 public class Javafinalproject {
