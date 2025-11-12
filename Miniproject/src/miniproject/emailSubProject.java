@@ -31,6 +31,7 @@ public class emailSubProject extends javax.swing.JPanel {
     private JLabel pictureLabel;
     private JLabel educationLabel;
     private JLabel supportCertLabel;
+    private JButton backButton;
     
     
     /**
@@ -263,6 +264,16 @@ buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 10));
     jButton1.setPreferredSize(new Dimension(160,45));
     jButton1.setCursor(new Cursor(Cursor.HAND_CURSOR));
     jButton1.addActionListener(this::jButton1ActionPerformed);
+    
+    jButton2 = new JButton("Back to Home");
+    jButton2.setFont(new Font("Segoe UI", Font.BOLD, 16));
+    jButton2.setBackground(Color.WHITE);
+    jButton2.setFocusPainted(false);
+    jButton2.setBorder(BorderFactory.createLineBorder(Color.WHITE, 2, true));
+    jButton2.setPreferredSize(new Dimension(160,45));
+    jButton2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    jButton2.addActionListener(this::jButton5ActionPerformed);
+    buttonPanel.add(jButton2);
     buttonPanel.add(jButton1);
 
     // Add form panel to center
@@ -294,6 +305,12 @@ buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 10));
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {    
+        String[] args = {"",""};
+        miniproject.Javafinalproject.main(args);
+        this.setVisible(false);
+    }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
