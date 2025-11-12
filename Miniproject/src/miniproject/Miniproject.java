@@ -22,7 +22,7 @@ public class Miniproject {
             JFrame frame = new JFrame("Student Application Form");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setSize(800, 700);
-            frame.setContentPane(new Subproject());
+            frame.setContentPane(new emailSubProject());
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
         });

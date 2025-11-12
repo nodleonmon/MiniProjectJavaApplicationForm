@@ -338,6 +338,8 @@ public class homepage extends javax.swing.JPanel {
 
     private void apply1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply1ActionPerformed
         // TODO add your handling code here:
+        miniproject.EmailMain.main(null);
+        this.setVisible(false);
     }//GEN-LAST:event_apply1ActionPerformed
 
     private void review1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review1ActionPerformed
@@ -358,6 +360,8 @@ public class homepage extends javax.swing.JPanel {
 
     private void apply2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply2ActionPerformed
         // TODO add your handling code here:
+        miniproject.EmailMain.main(null);
+        this.setVisible(false);
     }//GEN-LAST:event_apply2ActionPerformed
 
     private void review2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review2ActionPerformed
@@ -379,6 +383,9 @@ public class homepage extends javax.swing.JPanel {
 
     private void apply3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply3ActionPerformed
         // TODO add your handling code here:
+        
+        miniproject.EmailMain.main(null);
+        this.setVisible(false);
     }//GEN-LAST:event_apply3ActionPerformed
 
     private void review3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review3ActionPerformed
@@ -400,6 +407,9 @@ public class homepage extends javax.swing.JPanel {
 
     private void apply4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply4ActionPerformed
         // TODO add your handling code here:
+        
+        miniproject.EmailMain.main(null);
+        this.setVisible(false);
     }//GEN-LAST:event_apply4ActionPerformed
 
     private void review4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review4ActionPerformed
@@ -421,6 +431,8 @@ public class homepage extends javax.swing.JPanel {
 
     private void apply5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply5ActionPerformed
         // TODO add your handling code here:
+        miniproject.EmailMain.main(null);
+        this.setVisible(false);
     }//GEN-LAST:event_apply5ActionPerformed
 
     private void review5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review5ActionPerformed
@@ -442,6 +454,8 @@ public class homepage extends javax.swing.JPanel {
 
     private void apply6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apply6ActionPerformed
         // TODO add your handling code here:
+        miniproject.EmailMain.main(null);
+        this.setVisible(false);
     }//GEN-LAST:event_apply6ActionPerformed
 
     private void review6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_review6ActionPerformed
