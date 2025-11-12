@@ -55,9 +55,11 @@ public class Loginpage {
             playClickSound();
             String email = emailField.getText(); 
             String password = new String(passField.getPassword()); 
+            String[] db_result = Database.database_functions.database_search("Users", email, password);
             
-            if(email.equals("admin@gmail.com") && password.equals("12345")) { 
-                JOptionPane.showMessageDialog(frame, "Login Successful!"); 
+            if((db_result[1] != null) && (db_result[2] != null)) { 
+                JOptionPane.showMessageDialog(frame, "Login Successful! Welcome Back " + db_result[1] + "!" ); 
+                miniproject.Javafinalproject.main(null);
             } else { 
                 JOptionPane.showMessageDialog(frame, "Invalid Credentials!");
             }

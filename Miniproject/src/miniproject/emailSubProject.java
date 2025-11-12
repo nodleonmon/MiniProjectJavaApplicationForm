@@ -23,7 +23,7 @@ import javax.sound.sampled.Clip;
  */
 
 
-public class Subproject extends javax.swing.JPanel {
+public class emailSubProject extends javax.swing.JPanel {
     private File pictureFile = null;
     private File educationFile = null;
     private File supportCertFile = null;
@@ -36,7 +36,7 @@ public class Subproject extends javax.swing.JPanel {
     /**
      * Creates new form Subproject
      */
-    public Subproject() {
+    public emailSubProject() {
         initComponents();
         ActionListener courseCheckListener = e -> checkDuplicateCourses();   
         jComboBox1.addActionListener(courseCheckListener);
@@ -358,6 +358,11 @@ buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 10));
             return;
         }
         
+        //(String Table, String Name, String IC_Num, int Age , String Profile_pic,
+        //                            String Education, String Edu_Attac, String Course1, String Course2, String Course3,
+        //                            String Phone_Num, String Email, String Address, String Supporting_Att)
+        Database.database_functions.database_Add("Biodata", fullName, icNumber, new Integer(age), pictureLabel.getText(), educationLabel.getText(), educationLabel.getText(), course1, course2, course3, contact, emailTo, address, supportCertLabel.getText());
+        
         String messageText = "<html>"
         + "<head>"
         + "<style>"
@@ -483,21 +488,22 @@ buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 10));
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         pictureFile = chooseFile("Select Education Certificate");
-        if (pictureFile != null) pictureLabel.setText(pictureFile.getName());
+        if (pictureFile != null) pictureLabel.setText(pictureFile.getAbsolutePath());
         else pictureLabel.setText("No file selected");
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
         educationFile = chooseFile("Select Education Certificate");
-        if (educationFile != null) educationLabel.setText(educationFile.getName());
+        if (educationFile != null) educationLabel.setText(educationFile.getAbsolutePath());
         else educationLabel.setText("Noo file selected");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
         supportCertFile = chooseFile("Select Support Certificate");
-        if (supportCertFile != null) supportCertLabel.setText(supportCertFile.getName());
+        if (supportCertFile != null) supportCertLabel.setText(supportCertFile.getAbsolutePath());
         else supportCertLabel.setText("Noo file selected");
     }//GEN-LAST:event_jButton4ActionPerformed
 

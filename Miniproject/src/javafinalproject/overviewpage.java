@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package javafinalproject;
+import java.awt.*;
+
 /**
  *
  * @author USER
@@ -16,11 +18,21 @@ public overviewpage() {
         makeScrollable();
         addAccordionUI1();
         addAccordionUI2();
+        
     }
-
     /** Make the entire panel scrollable */
     private void makeScrollable() {
-        JPanel contentPanel = new JPanel(null);
+        JPanel contentPanel = new JPanel(null){
+        private Image backgroundImage = new ImageIcon(getClass().getResource("/javafinalproject/gambaran/bgimage3v2.jpeg")).getImage();
+        @Override
+        protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (backgroundImage != null) {
+        // Scale image to fit the panel
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+    }
+    }
+    };
         contentPanel.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         // Move GUI components into content panel
@@ -33,9 +45,9 @@ public overviewpage() {
 
         // Set manual positions
         jLabel3.setBounds(400, 80, 750, 60);
-        jLabel2.setBounds(100, 300, 750, 60);
-        jLabel1.setBounds(895, 300, 750, 60);
-        jButton1.setBounds(1200, 75, 200, 50);
+        jLabel2.setBounds(100, 200, 750, 60);
+        jLabel1.setBounds(895, 200, 750, 60);
+        jButton1.setBounds(1250, 80, 200, 50);
         jPanel1.setBounds(110, 400, 500, 600);
         jPanel2.setBounds(900, 400, 500, 600);
 
@@ -49,7 +61,6 @@ public overviewpage() {
         setLayout(new java.awt.BorderLayout());
         add(scrollPane, java.awt.BorderLayout.CENTER);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -146,7 +157,7 @@ public overviewpage() {
             .addGroup(layout.createSequentialGroup()
                 .addGap(116, 116, 116)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 167, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
@@ -154,7 +165,7 @@ public overviewpage() {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(355, 355, 355))
+                .addGap(488, 488, 488))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(243, 243, 243)
@@ -267,7 +278,8 @@ public overviewpage() {
 
     return sectionPanel;
 }
-
+    
+    private Image backgroundImage;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;

@@ -4,11 +4,11 @@ import javax.swing.JFrame;
 
 public class EmailMain {
     public static void main(String[] args) {
-        // Create a window to show your Subproject form
+        // Create a window to show your emailSubProject form
         JFrame frame = new JFrame("Application Form");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(900, 700);
-        frame.setContentPane(new Subproject()); // use your existing Subproject panel
+        frame.setContentPane(new emailSubProject()); // use your existing emailSubProject panel
         frame.setVisible(true);
     }
 }
