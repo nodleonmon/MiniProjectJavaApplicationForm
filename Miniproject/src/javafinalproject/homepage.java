@@ -16,6 +16,8 @@ public class homepage extends javax.swing.JPanel {
     /**
      * Creates new form homepage
      */
+    
+    
     public homepage() {
         initComponents();
         makeScrollable();

@@ -4,16 +4,29 @@
  */
 package javafinalproject;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author USER
  */
 public class coursepreview2 extends javax.swing.JPanel {
-
+    private Image backgroundImage = new ImageIcon(getClass().getResource("/javafinalproject/gambaran/bgimage2v2.jpeg")).getImage();
+        @Override
+        protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (backgroundImage != null) {
+        // Scale image to fit the panel
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+    }
+    }
     /**
      * Creates new form coursepreview2
      */
     public coursepreview2() {
+        
         initComponents();
     }
 

@@ -59,7 +59,8 @@ public class Loginpage {
             
             if((db_result[1] != null) && (db_result[2] != null)) { 
                 JOptionPane.showMessageDialog(frame, "Login Successful! Welcome Back " + db_result[1] + "!" ); 
-                miniproject.Javafinalproject.main(null);
+                String[] args = {"",""};
+                miniproject.Javafinalproject.main(args);
             } else { 
                 JOptionPane.showMessageDialog(frame, "Invalid Credentials!");
             }
