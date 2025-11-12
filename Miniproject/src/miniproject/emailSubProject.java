@@ -60,14 +60,28 @@ public class emailSubProject extends javax.swing.JPanel {
     setBackground(new Color(245, 245, 250));
 
     // ===== TITLE PANEL =====
-    JPanel titlePanel = new JPanel(new BorderLayout());
-    titlePanel.setBackground(new Color(173, 216, 230));
+    // ===== TITLE PANEL =====
+    JPanel titlePanel = new JPanel(new BorderLayout()) {
+        private Image backgroundImage = new ImageIcon(getClass().getResource("/miniproject/gambar/f.png")).getImage();
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        }   
+    };
+    titlePanel.setPreferredSize(new Dimension(0, 100)); // Tinggi banner
+    titlePanel.setOpaque(false);
     titlePanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
-    JLabel title = new JLabel("Student Application Form", SwingConstants.CENTER);
+
+    JLabel title = new JLabel("", SwingConstants.CENTER);
     title.setFont(new Font("Segoe UI", Font.BOLD, 28));
     title.setForeground(Color.WHITE);
+    title.setOpaque(false);
+
     titlePanel.add(title, BorderLayout.CENTER);
     add(titlePanel, BorderLayout.NORTH);
+
     
     JPanel formPanel = new JPanel(new GridBagLayout()) {
     private Image backgroundImage = new ImageIcon(getClass().getResource("/miniproject/gambar/coverBackground.png")).getImage();
@@ -219,9 +233,28 @@ public class emailSubProject extends javax.swing.JPanel {
     gbc.gridx = 1; gbc.weightx = 0.5; formPanel.add(rightPanel, gbc);
 
     // Submit Button
-    JPanel buttonPanel = new JPanel();
-    buttonPanel.setBackground(new Color(173, 216, 230));
-    buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
+    // --- Submit Button Panel with Gradient ---
+JPanel buttonPanel = new JPanel(new BorderLayout()) {
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g;
+        int width = getWidth();
+        int height = getHeight();
+
+        // Gradient dari atas (#241571) ke bawah (#000000)
+        Color color1 = new Color(36, 21, 113);  // #241571
+        Color color2 = new Color(0, 0, 0);      // #000000
+        GradientPaint gp = new GradientPaint(0, 0, color1, 0, height, color2);
+        g2d.setPaint(gp);
+        g2d.fillRect(0, 0, width, height);
+    }
+};
+buttonPanel.setPreferredSize(new Dimension(0, 90));
+buttonPanel.setOpaque(false);
+buttonPanel.setBorder(BorderFactory.createEmptyBorder(20, 0, 20, 0));
+buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 10));
+
     jButton1 = new JButton("Send Email");
     jButton1.setFont(new Font("Segoe UI", Font.BOLD, 16));
     jButton1.setBackground(Color.WHITE);
