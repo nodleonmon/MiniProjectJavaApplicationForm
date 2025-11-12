@@ -174,19 +174,29 @@ public overviewpage() {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    // Get the parent JFrame that holds this panel
-    JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+    
+    public void switchtohomepage(){
+        this.setVisible(true);
+// Get the parent JFrame that holds this panel
+        JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
 
     // Remove the current panel (overview)
-    parentFrame.getContentPane().removeAll();
+        parentFrame.getContentPane().removeAll();
 
     // Add the homepage panel
-    parentFrame.add(new homepage());
+        parentFrame.add(new homepage());
 
     // Refresh the frame to display the new panel
-    parentFrame.revalidate();
-    parentFrame.repaint();
+        parentFrame.revalidate();
+        parentFrame.repaint();
+    }
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JFrame parentFrame = (JFrame) SwingUtilities.getWindowAncestor(this);
+
+    // Remove the current panel (overview)
+        parentFrame.dispose();
+        miniproject.Loginpage.main(null);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
     private void addAccordionUI1() {
         jPanel1.setLayout(new BoxLayout(jPanel1, BoxLayout.Y_AXIS));

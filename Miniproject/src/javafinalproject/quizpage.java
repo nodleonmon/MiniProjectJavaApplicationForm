@@ -1,5 +1,9 @@
 package javafinalproject;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
@@ -10,7 +14,15 @@ package javafinalproject;
  * @author USER
  */
 public class quizpage extends javax.swing.JPanel {
-
+    private Image backgroundImage = new ImageIcon(getClass().getResource("/javafinalproject/gambaran/bgimage2v2.jpeg")).getImage();
+        @Override
+        protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (backgroundImage != null) {
+        // Scale image to fit the panel
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+    }
+    }
     /**
      * Creates new form quizpage
      */
@@ -523,6 +535,7 @@ public class quizpage extends javax.swing.JPanel {
         jTabbedPane2.addTab("Question 10", jPanel2);
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("SUGGESTED COURSE : ");
 
         checkresult.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N

@@ -4,12 +4,24 @@
  */
 package javafinalproject;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author USER
  */
 public class coursepreview extends javax.swing.JPanel {
-
+    private Image backgroundImage = new ImageIcon(getClass().getResource("/javafinalproject/gambaran/bgimage2v2.jpeg")).getImage();
+        @Override
+        protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (backgroundImage != null) {
+        // Scale image to fit the panel
+        g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        }
+    }
     public coursepreview() {
     initComponents();  // This sets up all your components (labels, panels, etc.)
 }
@@ -99,9 +111,9 @@ public class coursepreview extends javax.swing.JPanel {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(objective1)
-                    .addComponent(jLabel2)
                     .addComponent(jLabel3)
-                    .addComponent(subject1))
+                    .addComponent(subject1)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -118,12 +130,12 @@ public class coursepreview extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(course1)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addComponent(course1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
