@@ -600,7 +600,7 @@ public class quizpage extends javax.swing.JPanel {
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void checkresultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkresultActionPerformed
-        int automationIoT = 0;
+    int automationIoT = 0;
     int computerNetwork = 0;
     int electronicSystem = 0;
     int cncPrecision = 0;
