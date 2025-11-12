@@ -12,6 +12,8 @@ public class Loginpage {
         JFrame frame = new JFrame("Login Page"); 
         frame.setSize(400, 300); 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // window besar
+        frame.setMinimumSize(new Dimension(600, 400));
         frame.setLayout(null);
 
         // 🔹 Tambah panel background animasi

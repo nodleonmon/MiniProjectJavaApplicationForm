@@ -11,6 +11,8 @@ public class signuppage {
         JFrame frame = new JFrame("Sign Up Page");
         frame.setSize(400, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // window besar
+        frame.setMinimumSize(new Dimension(600, 400));
         frame.setLayout(null);
 
         // 🌈 Gunakan panel animasi sebagai background utama
